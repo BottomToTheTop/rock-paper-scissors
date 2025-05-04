@@ -55,21 +55,6 @@ function playGame() {
             console.log("It's a tie!");
         }
     }
-
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score:", humanScore, "Computer Score:", computerScore);
-    getNewChoices();
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score:", humanScore, "Computer Score:", computerScore);
-    getNewChoices();
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score:", humanScore, "Computer Score:", computerScore);
-    getNewChoices();
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score:", humanScore, "Computer Score:", computerScore);
-    getNewChoices();
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score:", humanScore, "Computer Score:", computerScore);
 }
 
 playGame();
