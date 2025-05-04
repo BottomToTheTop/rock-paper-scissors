@@ -18,10 +18,26 @@ function getNewComputerChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+function resetScore() {
+    humanScore = 0;
+    computerScore = 0;
+}
+
 const results = document.querySelector('#results');
+const score = document.querySelector('#score');
+
+function displayScore(humanScore, computerScore) {
+    score.textContent = `Player: ${humanScore} Computer: ${computerScore}`
+    if (humanScore === 5) {
+        score.textContent = "Player wins!";
+        resetScore();
+    } else if (computerScore === 5) {
+        score.textContent = "Computer wins!";
+        resetScore();
+    }
+}
 
 function playRound(humanChoice, computerChoice) {
-
     if (humanChoice == "rock" && computerChoice == "rock") {
         results.textContent = "It's a tie!";
     } else if (humanChoice == "rock" && computerChoice == "paper") {
@@ -47,6 +63,8 @@ function playRound(humanChoice, computerChoice) {
     } else if (humanChoice == "scissors" && computerChoice == "scissors") {
         results.textContent = "It's a tie!";
     }
+    
+    displayScore(humanScore, computerScore)
 }
 
 const rockBtn = document.querySelector("#rock");
